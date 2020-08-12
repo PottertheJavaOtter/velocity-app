@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DividendBreakdown should handle 0 dividend 1`] = `
+<div>
+  <section
+    class="DividendBreakdown"
+  >
+    <ion-text
+      color="dark"
+    >
+      <h5>
+        Annually
+      </h5>
+      <p>
+        $0.00
+      </p>
+    </ion-text>
+    <div
+      class="DividendBreakdown__columns"
+    >
+      <ion-text
+        color="dark"
+      >
+        <h5>
+          Quarterly
+        </h5>
+        <p>
+          $0.00
+        </p>
+      </ion-text>
+      <ion-text
+        color="dark"
+      >
+        <h5>
+          Monthly
+        </h5>
+        <p>
+          $0.00
+        </p>
+      </ion-text>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`DividendBreakdown should render the dividend breakdowns 1`] = `
+<div>
+  <section
+    class="DividendBreakdown"
+  >
+    <ion-text
+      color="dark"
+    >
+      <h5>
+        Annually
+      </h5>
+      <p>
+        $10,909.12
+      </p>
+    </ion-text>
+    <div
+      class="DividendBreakdown__columns"
+    >
+      <ion-text
+        color="dark"
+      >
+        <h5>
+          Quarterly
+        </h5>
+        <p>
+          $2,727.28
+        </p>
+      </ion-text>
+      <ion-text
+        color="dark"
+      >
+        <h5>
+          Monthly
+        </h5>
+        <p>
+          $909.09
+        </p>
+      </ion-text>
+    </div>
+  </section>
+</div>
+`;

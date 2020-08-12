@@ -1,0 +1,14 @@
+.DividendBreakdown {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .DividendBreakdown__columns {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../colors.scss";
+
+#portfolio-page {
+  ion-toolbar {
+    --background: transparent;
+    --color: $white;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    top: 0;
+  }
+
+  ion-toolbar ion-back-button,
+  ion-toolbar ion-button,
+  ion-toolbar ion-menu-button {
+    --color: $white;
+  }
+
+  .PortfolioHeader {
+    background: pink;
+    height: 30%;
+    padding-top: 10%;
+    position: relative;
+    width: 100%;
+  }
+}

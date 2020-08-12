@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockRow should render the stock's information 1`] = `
+<div>
+  <ion-item
+    data-testid="stock-row-OKE"
+    href="/stock/stock-id"
+  >
+    <ion-avatar
+      slot="start"
+    >
+      <img
+        src="https://picsum.photos/100/100"
+      />
+    </ion-avatar>
+    <ion-label>
+      <h2>
+        ONEOK (OKE)
+      </h2>
+      <p>
+        Shares: 
+        981.2
+      </p>
+    </ion-label>
+    <ion-note
+      color="primary"
+      slot="end"
+    >
+      $100,180.52
+    </ion-note>
+  </ion-item>
+</div>
+`;
