@@ -1,4 +1,4 @@
-@import "../colors.scss";
+@import "../../colors.scss";
 
 #portfolio-page {
   ion-toolbar {
@@ -20,7 +20,7 @@
   .PortfolioHeader {
     background: pink;
     height: 30%;
-    padding-top: 10%;
+    padding-top: 48px;
     position: relative;
     width: 100%;
   }

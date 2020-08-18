@@ -8,37 +8,25 @@ import {
   IonMenuButton,
   IonButton,
   IonIcon,
-  IonDatetime,
-  IonSelectOption,
   IonList,
-  IonItem,
-  IonLabel,
-  IonSelect,
   IonPopover,
-  IonText,
-  IonAvatar,
 } from "@ionic/react";
-import "./Portfolio.scss";
+import "./HomePage.scss";
 import { ellipsisHorizontal, ellipsisVertical } from "ionicons/icons";
-import AboutPopover from "../components/AboutPopover";
-import DividendBreakdown from "../components/DividendBreakdown/DividendBreakdown";
-import StockRow from "../components/StockRow/StockRow";
+import AboutPopover from "../../components/AboutPopover";
 
-interface PortfolioProps { }
+interface HomePageProps { }
 
-const Portfolio: React.FC<PortfolioProps> = () => {
+const HomePage: React.FC<HomePageProps> = () => {
   const [showPopover, setShowPopover] = useState(false);
   const [popoverEvent, setPopoverEvent] = useState();
-  const [location, setLocation] = useState<
+  const [] = useState<
     "madison" | "austin" | "chicago" | "seattle"
   >("madison");
-  const [conferenceDate, setConferenceDate] = useState(
+  const [] = useState(
     "2047-05-17T00:00:00-05:00"
   );
 
-  const selectOptions = {
-    header: "Select a Location",
-  };
 
   const presentPopover = (e: React.MouseEvent) => {
     setPopoverEvent(e.nativeEvent);
@@ -46,7 +34,7 @@ const Portfolio: React.FC<PortfolioProps> = () => {
   };
 
   return (
-    <IonPage id="portfolio-page">
+    <IonPage id="HomePage-page">
       <IonContent>
         <IonHeader className="ion-no-border">
           <IonToolbar>
@@ -65,15 +53,7 @@ const Portfolio: React.FC<PortfolioProps> = () => {
           </IonToolbar>
         </IonHeader>
 
-        <div className="PortfolioHeader">
-          <DividendBreakdown dividend={18908} />
-        </div>
-
-        <div>
-          <IonList>
-            <StockRow id="some-id" ticker="OKE" name="ONEOK" shares={981.2} dividendPerShare={102.1} />
-          </IonList>
-        </div>
+        Welcome
       </IonContent>
 
       <IonPopover
@@ -87,4 +67,4 @@ const Portfolio: React.FC<PortfolioProps> = () => {
   );
 };
 
-export default React.memo(Portfolio);
+export default React.memo(HomePage);
