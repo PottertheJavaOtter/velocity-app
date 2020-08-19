@@ -49,17 +49,19 @@ describe("MainTabs", () => {
     })
   })
 
-  describe('/income', () => {
-    it('should take you to Income Page', () => {
-      renderWithMemoryRouter(<MainTabs />, ["/tabs/income"]);
-      expect(screen.getByText("On the Income Page")).toBeInTheDocument();
+  describe("isLogged in", () => {
+    describe('/income', () => {
+      it('should take you to Income Page', () => {
+        renderWithMemoryRouter(<MainTabs isLoggedin />, ["/tabs/income"]);
+        expect(screen.getByText("On the Income Page")).toBeInTheDocument();
+      })
     })
-  })
 
-  describe('/porfolio', () => {
-    it('should take you to Home Page', () => {
-      renderWithMemoryRouter(<MainTabs />, ["/tabs/porfolio"]);
-      expect(screen.getByText("On the Portfolio Page")).toBeInTheDocument();
+    describe('/porfolio', () => {
+      it('should take you to Home Page', () => {
+        renderWithMemoryRouter(<MainTabs isLoggedin />, ["/tabs/porfolio"]);
+        expect(screen.getByText("On the Portfolio Page")).toBeInTheDocument();
+      })
     })
   })
 });
