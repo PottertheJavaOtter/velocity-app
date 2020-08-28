@@ -1,27 +1,20 @@
 // @ts-nocheck
 import React from "react";
 import { render } from "@testing-library/react";
-import { MemoryRouter, Route } from "react-router-dom";
-import { History, LocationDescriptor } from "history";
+import { Router } from "react-router-dom";
+import { createMemoryHistory } from "history";
 
 const renderWithMemoryRouter = (
   ui: React.ReactNode,
-  initialEntries: LocationDescriptor[] = ["/my/initial-route"]
+  initialEntries: string[] = ["/my/initial-route"]
 ) => {
-  let historyInTest: History;
+  const history = createMemoryHistory({ initialEntries });
   return {
     ...render(
-      <MemoryRouter initialEntries={initialEntries}>
+      <Router history={history}>
         {ui}
-        <Route
-          path="*"
-          render={({ history }) => {
-            historyInTest = history;
-            return null;
-          }}
-        />
-      </MemoryRouter>),
-    history: historyInTest
+      </Router>),
+    history
   };
 };
 

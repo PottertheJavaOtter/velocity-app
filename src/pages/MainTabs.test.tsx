@@ -22,8 +22,9 @@ jest.mock("./Portfolio/Portfolio", () => {
 describe("MainTabs", () => {
   describe('default route', () => {
     it('should take you to Home Page', () => {
-      const { container } = renderWithMemoryRouter(<MainTabs />, ["/tabs"]);
+      const { container, history } = renderWithMemoryRouter(<MainTabs />, ["/tabs"]);
       expect(screen.getByText("On the Home Page")).toBeInTheDocument();
+      expect(history.location.pathname).toContain("/tabs/home")
       expect(container).toMatchSnapshot();
     })
   })

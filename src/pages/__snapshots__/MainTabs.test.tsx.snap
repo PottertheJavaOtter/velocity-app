@@ -32,6 +32,28 @@ exports[`MainTabs default route should take you to Home Page 1`] = `
         </ion-label>
       </ion-tab-button>
       <ion-tab-button
+        href="/tabs/porfolio"
+        tab="porfolio"
+      >
+        <ion-icon
+          icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M384 80H128c-26 0-43 14-48 40L48 272v112a48.14 48.14 0 0048 48h320a48.14 48.14 0 0048-48V272l-32-152c-5-27-23-40-48-40z' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/><path stroke-linecap='round' stroke-linejoin='round' d='M48 272h144M320 272h144M192 272a64 64 0 00128 0M144 144h224M128 208h256' class='ionicon-fill-none ionicon-stroke-width'/></svg>"
+        />
+        <ion-label>
+          Porfolio
+        </ion-label>
+      </ion-tab-button>
+      <ion-tab-button
+        href="/tabs/income"
+        tab="income"
+      >
+        <ion-icon
+          icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><rect x='32' y='80' width='448' height='256' rx='16' ry='16' transform='rotate(180 256 208)' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/><path stroke-linecap='round' stroke-linejoin='round' d='M64 384h384M96 432h320' class='ionicon-fill-none ionicon-stroke-width'/><circle cx='256' cy='208' r='80' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/><path d='M480 160a80 80 0 01-80-80M32 160a80 80 0 0080-80M480 256a80 80 0 00-80 80M32 256a80 80 0 0180 80' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/></svg>"
+        />
+        <ion-label>
+          Income
+        </ion-label>
+      </ion-tab-button>
+      <ion-tab-button
         href="/tabs/schedule"
         tab="schedule"
       >
