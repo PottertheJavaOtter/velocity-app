@@ -37,6 +37,8 @@ import HomeOrTutorial from './components/HomeOrTutorial';
 import { Schedule } from "./models/Schedule";
 import RedirectToLogin from './components/RedirectToLogin';
 
+import "./App.scss";
+
 const App: React.FC = () => {
   return (
     <AppContextProvider>

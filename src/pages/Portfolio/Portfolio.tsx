@@ -62,10 +62,11 @@ const Portfolio: React.FC<PortfolioProps> = () => {
             <IonInput value={searchTicker} placeholder="Search company" onIonBlur={() => setSearchFocused(false)} onIonFocus={() => setSearchFocused(true)} onIonChange={e => setSearchTicker(e.detail.value!)} />
           </IonItem>
         </div>
-
-        {searchFocused ? (
+        {searchTicker || searchFocused ? (
           <IonGrid>
-            <IonItem>Results</IonItem>
+            <IonItem>
+              Results
+            </IonItem>
             <IonRow>
               <IonCol>Symbol</IonCol>
               <IonCol>Price</IonCol>
@@ -76,19 +77,19 @@ const Portfolio: React.FC<PortfolioProps> = () => {
           <IonGrid>
             <IonItem>My Stocks</IonItem>
             <IonRow>
-              <IonCol>Symbol</IonCol>
-              <IonCol>Price</IonCol>
-              <IonCol>Shares</IonCol>
-              <IonCol>Yield</IonCol>
+              <IonCol className="PortfolioGriItem">Symbol</IonCol>
+              <IonCol className="PortfolioGriItem">Price</IonCol>
+              <IonCol className="PortfolioGriItem">Shares</IonCol>
+              <IonCol className="PortfolioGriItem">Yield</IonCol>
             </IonRow>
             {[0, 0, 0, 0, 0, 0, 0, 0, 0].map(() => (
-              <IonRow className="ion-align-items-center">
-                <IonCol className="ion-align-self-center">
+              <IonRow>
+                <IonCol className="PortfolioGriItem">
                   <StockSymbol ticker={faker.random.alphaNumeric(3)} />
                 </IonCol>
-                <IonCol className="ion-align-self-center">${faker.finance.amount()}</IonCol>
-                <IonCol className="ion-align-self-center">{faker.random.number({ min: 1, max: 1000 })}</IonCol>
-                <IonCol className="ion-align-self-center">{faker.random.number({ min: 1, max: 100 }) / 10}%</IonCol>
+                <IonCol className="PortfolioGriItem">${faker.finance.amount()}</IonCol>
+                <IonCol className="PortfolioGriItem">{faker.random.number({ min: 1, max: 1000 })}</IonCol>
+                <IonCol className="PortfolioGriItem">{faker.random.number({ min: 1, max: 100 }) / 10}%</IonCol>
               </IonRow>
             ))}
           </IonGrid>
